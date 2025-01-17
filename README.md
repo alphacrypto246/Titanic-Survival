@@ -1,64 +1,81 @@
 # Titanic Survival Prediction
 
-This project focuses on analyzing and predicting passenger survival from the Titanic disaster using machine learning techniques. The project employs data preprocessing, exploratory data analysis (EDA), and model training to achieve reliable predictions.
+## Overview
+This project uses machine learning techniques to predict the survival of passengers aboard the Titanic, based on features such as age, sex, class, and other relevant data. The dataset used in this project is the famous Titanic dataset, which is a commonly used dataset for classification tasks in machine learning.
 
-## Project Overview
-
-The Titanic disaster remains one of the most well-known tragedies in history. This project uses passenger details such as age, gender, ticket class, and other relevant features to predict whether a passenger would survive the calamity. It involves:
-
-- Data exploration and visualization.
-- Data preprocessing for model readiness.
-- Building and evaluating machine learning models.
+## Objective
+The main objective of this project is to build a predictive model that can accurately classify whether a passenger survived or not based on the available features. We use various machine learning models, including Random Forest, Support Vector Machine (SVM), and Logistic Regression, to predict the survival outcome.
 
 ## Dataset
+The dataset used in this project is the Titanic dataset from Kaggle. It consists of the following features:
 
-The dataset for this project is the classic Titanic dataset provided by Kaggle. It includes the following columns:
+* **Pclass**: Passenger class (1st, 2nd, 3rd)
+* **Name**: Name of the passenger
+* **Sex**: Gender of the passenger (male or female)
+* **Age**: Age of the passenger in years
+* **SibSp**: Number of siblings or spouses aboard the Titanic
+* **Parch**: Number of parents or children aboard the Titanic
+* **Ticket**: Ticket number
+* **Fare**: Passenger fare
+* **Cabin**: Cabin number
+* **Embarked**: Port of embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
 
-- **PassengerId**: Unique ID for each passenger.
-- **Pclass**: Ticket class (1 = 1st, 2 = 2nd, 3 = 3rd).
-- **Name**: Name of the passenger.
-- **Sex**: Gender of the passenger.
-- **Age**: Age of the passenger.
-- **SibSp**: Number of siblings/spouses aboard the Titanic.
-- **Parch**: Number of parents/children aboard the Titanic.
-- **Ticket**: Ticket number.
-- **Fare**: Amount paid for the ticket.
-- **Cabin**: Cabin number.
-- **Embarked**: Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton).
+## Installation
 
-## Libraries and Tools Used
+1. Clone the repository:
+```bash
+git clone https://github.com/alphacrypto246/Titanic-Survival.git
+```
 
-The project utilizes the following Python libraries and tools:
+2. Navigate to the project directory:
+```bash
+cd Titanic-Survival
+```
 
-- **NumPy**: For numerical computations.
-- **Pandas**: For data manipulation and analysis.
-- **Matplotlib**: For data visualization.
-- **Seaborn**: For advanced visualization.
-- **Scikit-learn**: For machine learning algorithms and evaluation.
+3. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-## Project Structure
+4. Run the notebook:
+```bash
+jupyter notebook main.ipynb
+```
 
-- **`main.ipynb`**: The Jupyter Notebook containing code for data preprocessing, EDA, model training, and evaluation.
+## Approach
 
-## Key Steps in the Project
+### 1. Data Preprocessing
+* Handle missing values in the dataset
+* Convert categorical variables into numerical values using encoding techniques
+* Normalize the data for some machine learning models
 
-1. **Data Exploration**:
-   - Understanding the structure and properties of the dataset.
-   - Handling missing values and inconsistent data.
+### 2. Model Selection
+* Implement multiple machine learning models like Logistic Regression, Random Forest, and Support Vector Machine (SVM)
+* Train the models on the training dataset and test them on the test dataset
 
-2. **Data Visualization**:
-   - Analyzing relationships between features.
-   - Identifying key factors influencing survival rates.
+### 3. Evaluation
+* Evaluate the models using metrics like accuracy, precision, recall, and F1-score to measure their performance
 
-3. **Data Preprocessing**:
-   - Encoding categorical features.
-   - Filling missing values.
-   - Scaling numerical features for model compatibility.
-
-4. **Model Building and Evaluation**:
-   - Training machine learning models such as Logistic Regression, Decision Trees, and Random Forests.
-   - Evaluating models using accuracy, precision, recall, and F1-score.
+### 4. Final Model
+* The best-performing model is selected based on evaluation metrics for final predictions
 
 ## Results
+The project compares multiple machine learning models' performance in predicting Titanic passenger survival. It presents the results of each model's accuracy and provides insights into which features are most important for predicting survival.
 
-The project demonstrates an accurate and interpretable model for predicting passenger survival on the Titanic dataset. Specific results and performance metrics are detailed in the notebook.
+## Technologies Used
+* Python
+* Jupyter Notebook
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+
+## Contributing
+Feel free to fork the repository, open issues, and submit pull requests for any improvements or fixes. Contributions are welcome!
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+* Titanic dataset is provided by Kaggle: https://www.kaggle.com/c/titanic
